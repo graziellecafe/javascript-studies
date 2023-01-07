@@ -1,0 +1,1 @@
+console.log("Hello world com script.js"); 
