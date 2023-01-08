@@ -34,3 +34,15 @@ Repositório criado para estudar Javascript do básico ao avançado
 * Calcular, manipular e validar dados, 
 * Pode ser utilizada como linguagem serve-side (Node.js)
 * Linguagem base de grandes framewors (React, Angular, Vue).
+
+# Section 2: Tipos de dados e operadores 
+Conhecer os tipos de dados em JS e também os operadores da linguagem 
+
+## O que são os tipos de dados? 
+É a classificação / categoria de um dado 
+
+Tipos de dados: 
+- Number (Aritmético, Special Numbers), 
+- String, 
+- Boolean (Comparações e operadores lógicos), 
+- Empty values ( null, undefined ). 
