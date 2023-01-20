@@ -92,7 +92,103 @@ O software possui um objetivo e os statements "guiam" o software para o seu obje
 
 ### Função built-in: Math()
 * Função utilizada para expressões / cálculos matemáticos
-* Ex: ```let maiorNumero = Math.max(1,3,6,2)````
+* Ex: ```let maiorNumero = Math.max(1,3,6,2)```
 * Math.max : maior número 
 * Math.ceil : arredonda para cima 
 * Math.round : arredonda para baixo 
+
+## Estruturas de controle
+* Um programa é executado de cima para baixo 
+* Com as estruturas podemos modelar o fluxo do programa 
+* Ou seja, dependendo dos valores de statements e expressions podemos seguir caminhos diferentes 
+
+### Estrutura condicional: if 
+* O programa vai executar um bloco de código, SE algo acontecer 
+* Onde algo é a condição imposta por um statement 
+* Quer resultar em um boolean (true or false)
+```javascript 
+let idade = 19; 
+
+if(idade > 18) {
+    console.log('Pode entrar); 
+}
+```
+### Estrutura condicional: else 
+* Podemos executar um outro bloco de código, caso a instrução do if não seja atendida 
+* Ou seja, SE NÃO EXECUTAR o bloco if, EXECUTE o bloco else. 
+```javascript 
+let nome = "Pedro"; 
+
+if (nome == "João"){
+    console.log("Seu nome é João"); 
+} else { 
+    console.log("O seu nome não é João"); 
+}
+```
+
+### Estrutura condicional: else if 
+* Ainda podemos encadear mais condições com o else if
+* Ou seja, antes de executar um else, ou até mesmo sem ele, podemos verificar mais condições 
+```javascript
+let a = 5; 
+let b = 3; 
+
+if (a + b == 3) {
+    console.log("O resultado é 3 ");
+} else if (a == 4) {
+    console.log("O valor de a é igual a 4"); 
+} else if (b == 3) { 
+    console.log("O valor de b é 3"); 
+} else {
+    console.log("Nenhuma das condições acima."); 
+}
+````
+
+## Estruturas de repetição 
+* A ideia é repetir uma ação até atingir uma condição 
+* Ao invés de repetirmos o mesmo código várias vezes, criamos um statement que fará uma checagem em cada loop 
+
+### Estrutura de repetição: while 
+* Fará uma ação, até que a condição seja atingida 
+* Precisamos realmente 'definir um fim' para o loop, para não termos o problema do loop infinito 
+
+```javascript 
+lex x = 10; 
+
+while (x > 0){
+    console.log(x); 
+    x = x - 1; 
+}
+```
+
+### Estrutura de repetição: do while 
+* Semelhante ao while, porém a estrutura muda um pouco
+* Quase não é utilizado 
+
+```javascript
+let y = 0; 
+
+do { 
+    console.log(y); 
+    y = y + 1; 
+} while ( y < 5); 
+```
+
+### Estrutura de repetição: for 
+* Semelhante ao while, porém amplamente utilizado 
+* É a estrutura mais fácil de entender
+
+```javascript
+    for (let numero = 2; numero < 100; numero = numero * 2) {
+        console.log(`O número é ${numero}); 
+    }
+```
+
+### Estrutura condicional: switch 
+* Quando há necessidade de vários ifs, podemos utilizar o switch/case
+* Para sair de um case podemos usar um break 
+* Podemos inserir uma expressão default, para caso nenhum valor for correspondido 
+
+```javascript
+
+```
