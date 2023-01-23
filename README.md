@@ -192,3 +192,148 @@ do {
 ```javascript
 
 ```
+
+# Section 6: Funções 
+* Funções são estruturas de códigos menores que são reaproveitadas durante a execução / construção de um programa 
+* Principal objetivo: poupar repetição de código 
+* Podem ser consideradas "subprogramas"
+
+ ## Definindo uma função 
+ * Uma função tem uma estrutura um pouco mais complexa 
+ * Devemos declarar a função sempre com a palavra function 
+ * Pode conter argumentos/parâmetros, definidos entre ()
+ * O corpo da função é definido entre { }
+ * Geralmente uma função retorna um valor 
+ * É possível declarar funções em variáveis 
+
+ ```javascript
+ function escreverNoConsole() {
+     console.log("Hello world!"); 
+ }
+
+ escreverNoConsole(); 
+ ```
+
+ ```javascript
+ const textoNoConsole = function() {
+     console.log("Texto no console!"); 
+ }
+
+ textoNoConsole(); 
+ ```
+
+ ## Arrow Functions
+ * Uma outra forma de escrever funções 
+ * Bem utilizada nos frameworks modernos 
+ * Porém não deve substituir as functions por completo
+
+ ```javascript
+ const parOuImpar = (n) => {
+     return n % 2; 
+ }
+
+console.log(parOuImpar(3)); 
+ ```
+
+# Section 8: Objetos e Arrays 
+Conceitos: muitos itens em um componente só 
+
+## O que são arrays? 
+* Possibilidade de adicionar um conjunto de valores a uma vari;avel 
+* O array deve ser escrito entre colchetes, separando os valores por vírgula 
+
+ ```javascript
+    let numeros = [ 1, 3, 5, 8, 12]; 
+    let informacoes = ["Matheus", 12, true, "Teste", 2]; 
+```
+
+* Podemos acessar um array pelo seu índice, por exemplo array[1]; 
+* Lembrando que o primeiro índice sempre é 0, ou seja, para acessar o primeiro elemento: arr[0]; 
+
+## Propriedades de um array 
+* Propriedades são informações que podem ser verificadas de um valor 
+* Quase todos os valores de Javascript tem propriedades, menos null e undefined 
+
+ ```javascript
+let numeros = [1, 3, 4, 5, 8, 12]; 
+
+console.log(numeros.length); 
+console.log(numeros['length']); 
+console.log(numeros[3]); 
+```
+
+## Métodos 
+* Métodos são propriedades que funcionam como funções 
+* Strings e arrays contém métodos 
+
+ ```javascript
+let marca = 'Nike'; 
+
+console.log(typeof marca.toUpperCase); 
+console.log(marca.toUpperCase()); 
+ ```
+
+ ## O que são objetos 
+ * Uma coleção de propriedades, parecidos com arrays 
+ * Podemos acessar estas propriedades 
+
+  ```javascript
+let pessoa = { 
+    nome: "Matheus", 
+    profissao: "programador", 
+    idade: 28, 
+    latir: { 
+        console.log("Olá!"); 
+    }
+}
+
+console.log(pessoa.nome); 
+console.log(pessoa.profissao); 
+pessoa.latir(); 
+ ```
+
+ ### Copiando propriedades de um objeto 
+ * Podemos copiar todas as propriedades de um objeto para outro 
+
+```javascript
+let objetoA = { 
+    prop1: 'teste', 
+    prop2: 'testando', 
+}
+
+let objetoB = { 
+    prop3: 'propriedade'
+}
+
+Object.assign(objetoA, objetoB); 
+
+console.log(objetoA)
+ ```
+
+ ### Keys 
+ ```javascript
+ let objetoA = { 
+    prop1: 'teste', 
+    prop2: 'testando', 
+ }
+
+ console.log(Object.keys(objetoA)); 
+ ```
+
+ ### Mutação 
+ * Um objeto pode herdar todas as características do outro, virando uma referência ao mesmo 
+
+ ```javascript                                                      
+ let objetoA = { 
+     pontos: 10, 
+ }
+
+ objetoB = objetoA; 
+
+ let objetoC = { 
+     pontos: 10,
+ }
+
+ console.log(objetoA == objetoB); //true
+ console.lgo(objetoA == objetoC); //false
+ ```
